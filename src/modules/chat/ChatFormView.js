@@ -1,15 +1,15 @@
 import React from "react";
 import Backbone from "backbone";
-import ChatFormView from "./ChatFormView.jsx";
+import ChatFormReactView from "./ChatFormReactView";
 import ChatModel from "./ChatModel.js";
-export class bbChatFormView extends Backbone.View {
+export class ChatFormView extends Backbone.View {
     constructor(props) {
         super(props);
     }
 
     render(){
         React.render(
-            React.createElement(ChatFormView, {
+            React.createElement(ChatFormReactView, {
                 model: new ChatModel(),
                 handleError : this.handleError.bind(this)
             }),
@@ -23,4 +23,4 @@ export class bbChatFormView extends Backbone.View {
     }
 }
 
-new bbChatFormView().render();
+new ChatFormView().render();

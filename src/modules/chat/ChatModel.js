@@ -6,7 +6,7 @@ export default class ChatModel extends Backbone.Model {
         super(config);
     }
 
-    static validate(val) {
+    validate(val) {
         return val !== '';
     }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Backbone from "backbone";
-import ChatListView from "./ChatListView";
+import ChatListView from "./ChatListReactView";
 
 export default class ChatFormView extends React.Component{
 	constructor(props) {
