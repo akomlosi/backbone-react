@@ -11,4 +11,4 @@ import Router from "react-router";
 
 import backbone from "backbone";
 
-import ChatFormView from "./modules/chat/ChatFormView";
+import bbChatFormView from "./modules/chat/ChatFormView.js";
