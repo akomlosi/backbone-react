@@ -38,7 +38,3 @@ export default class ChatFormView extends React.Component{
 		);
 	}
 }
-//React.render(
-//	<ChatFormView />,
-//	document.getElementById('chat-form-container')
-//);
