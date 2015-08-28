@@ -12,8 +12,8 @@ export default class ChatListView extends React.Component {
 		var messages = this.props.messages;
 		return (
 			<ul>
-				{messages.map(function(m) {
-					return <ChatListItemView key={m} message={m} />;
+				{messages.map(function(o) {
+					return <ChatListItemView key={o.id} message={o.msg} />;
 				})}
 			</ul>
 		);

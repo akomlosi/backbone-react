@@ -8,13 +8,21 @@ export class ChatFormView extends Backbone.View {
     }
 
     render(){
+        //React.render(
+        //    React.createElement(ChatFormReactView, {
+        //        model: new ChatModel(),
+        //        handleError : this.handleError.bind(this)
+        //    }),
+        //    document.getElementById('chat-form-container')
+        //)
         React.render(
-            React.createElement(ChatFormReactView, {
-                model: new ChatModel(),
-                handleError : this.handleError.bind(this)
-            }),
+            <ChatFormReactView
+                model={new ChatModel()}
+                handleError={this.handleError.bind(this)}
+            />,
             document.getElementById('chat-form-container')
         )
+        this.trigger('ChatFormView:render-done');
         return this;
     }
 

@@ -18,16 +18,14 @@ export default class ChatFormView extends React.Component{
 			// call error callback and return to exit
 			return this.props.handleError();
 		}
-		this.setState({ messages : this.state.messages.concat([inputFieldEl.value])});
+		this.setState({ messages : this.state.messages.concat([{msg: inputFieldEl.value, id: new Date().getTime()}])});
 		inputFieldEl.value = '';
 	}
 
 	render() {
 		return (
 			<div>
-				<ul>
-					<ChatListView messages={this.state.messages} />
-				</ul>
+				<ChatListView messages={this.state.messages} />
 				<form acttion="" id="chat-form">
 					<input type="text" placeholder="Type your message here" ref="chat-field" />
 					<button type="submit" onClick={this.onSubmit.bind(this)}>
