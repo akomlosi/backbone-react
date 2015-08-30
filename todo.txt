@@ -1,4 +1,6 @@
 - mocha, chai, sinon
 - typescript
 
+
+- remove chat messages on recommender change (unset - render)
 https://github.com/DjebbZ/react-meetup-data-flow/blob/events/src/index.js

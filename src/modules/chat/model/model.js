@@ -2,8 +2,15 @@ import React from "react";
 import Backbone from "backbone";
 
 export default class ChatModel extends Backbone.Model {
-    constructor(config) {
-        super(config);
+    constructor() {
+        super();
+        this.defaults = {
+            modelName : 'unknown'
+        }
+    }
+
+    getModelName() {
+        return this.attributes.modelName;
     }
 
     validate(val) {

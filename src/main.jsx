@@ -2,13 +2,11 @@
  * App entry point
  */
 
+window.app = {};
+
 // Polyfill
 import "../node_modules/babel-core/polyfill";
 
-// Libraries
-import React from "react";
-import Router from "react-router";
+import Application from "./Application";
 
-import backbone from "backbone";
-
-import bbChatFormView from "./modules/chat/ChatFormView.js";
+new Application();

@@ -1,6 +1,6 @@
 import React from "react";
 import Backbone from "backbone";
-import ChatListItemView from "./ChatListItemReactView";
+import ChatListItemView from "./ChatListItemView";
 
 export default class ChatListView extends React.Component {
 	constructor(props) {
@@ -11,11 +11,13 @@ export default class ChatListView extends React.Component {
 	render() {
 		var messages = this.props.messages;
 		return (
-			<ul>
-				{messages.map(function(o) {
-					return <ChatListItemView key={o.id} message={o.msg} />;
-				})}
-			</ul>
+			<p>Chat with {this.props.modelName}
+				<ul>
+					{messages.map(function(o) {
+						return <ChatListItemView key={o.id} message={o.msg} />;
+					})}
+				</ul>
+			</p>
 		);
 	}
 }
