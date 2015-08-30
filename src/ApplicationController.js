@@ -15,5 +15,8 @@ export default class ApplicationController {
      */
     onRecommenderChange(ev) {
         this.controllers.chat.updateChat.call(this.controllers.chat, ev);
+        this.controllers.streamPlayer.play.call(
+            this.controllers.streamPlayer, ev.selectedModel
+        );
     }
 }
