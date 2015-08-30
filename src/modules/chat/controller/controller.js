@@ -9,6 +9,7 @@ export default class ChatController {
     }
 
     updateChat(params) {
+        React.unmountComponentAtNode(document.getElementById('chat-form-container'));
         this.chatModel.set({modelName : params.selectedModel.modelName});
         this.renderView();
     }

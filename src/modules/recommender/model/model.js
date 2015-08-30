@@ -8,9 +8,10 @@ export default class ChatModel extends Backbone.Model {
     fetch(url) {
         var result = null;
         if (url === '/get-new-model') {
+            var rand = Math.floor((Math.random() * 10000) + 1000);
             result = {
-                id : new Date().getTime(),
-                modelName: 'newModel-' + new Date().getTime(),
+                id : rand,
+                modelName: 'model-' + rand,
                 profilePictureUrl : "http://lorempixel.com/100/100/abstract/?id=" + new Date().getTime()
             };
         }

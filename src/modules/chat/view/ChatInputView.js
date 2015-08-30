@@ -36,7 +36,7 @@ export default class ChatInputView extends React.Component{
 				<form acttion="" id="chat-form">
 					<input type="text" placeholder="Type your message here" ref="chat-field" />
 					<button type="submit" onClick={this.onSubmit.bind(this)}>
-						Submit
+						Send
 					</button>
 				</form>
 			</div>

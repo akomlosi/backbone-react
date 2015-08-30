@@ -7,7 +7,7 @@ export default class ChatListItemView extends React.Component {
     }
     render() {
         return (
-            <li>{this.props.message}</li>
+            <li>You: {this.props.message}</li>
         )
     }
 }
