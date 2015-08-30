@@ -1,4 +1,3 @@
-import Events from "events";
 export default class ApplicationController {
     constructor(controllers) {
         this.controllers = controllers;

@@ -1,5 +1,4 @@
 import React from "react";
-import Backbone from "backbone";
 import ChatListItemView from "./ChatListItemView";
 
 export default class ChatListView extends React.Component {
